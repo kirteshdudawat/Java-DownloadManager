@@ -41,19 +41,19 @@ com.kirtesh.downloadmanager.service:
  Note : For ease of development and readability we have separated Start-Up Logic / implementation along with Validation Service and its  implementation from all other Business logic.
 
 com.kirtesh.downloadmanager.service.impl:
- Implements all Business Logic's as specified in com.agoda.downloadmanager.service package.
+ Implements all Business Logic's as specified in com.kirtesh.downloadmanager.service package.
 
 com.kirtesh.downloadmanager.service.startup:
  Package would keep abstraction of all Start-up logics required. 
 
 com.kirtesh.downloadmanager.service.startup.impl:
- Implements all Start-Up Logic's as specified in com.agoda.downloadmanager.service.startup package. Eg. Initializing All properties to JVM Cache at Startup
+ Implements all Start-Up Logic's as specified in com.kirtesh.downloadmanager.service.startup package. Eg. Initializing All properties to JVM Cache at Startup
 
 com.kirtesh.downloadmanager.service.validation:
  Package would keep abstraction of all Validation logics required. 
 
 com.kirtesh.downloadmanager.service.validation.impl:
- Implements all Validation Logic's as specified in com.agoda.downloadmanager.service.validation package. Eg. Validating if a location exist on local disk, before actually starting the download.
+ Implements all Validation Logic's as specified in com.kirtesh.downloadmanager.service.validation package. Eg. Validating if a location exist on local disk, before actually starting the download.
 
 com.kirtesh.downloadmanager.utils:
  Would contain all Utility methods that would be used across multiple services. Eg. Checking if String object is empty or not.
