@@ -20,41 +20,41 @@ Applications feature overview:
 
 Application Package Design / Definition:
 
-com.kirtesh.downloadmanager  
- Entry point to Application (We are currently here) 
+com.kirtesh.downloadmanager: 
+ Entry point to Application 
 
-com.kirtesh.downloadmanager.cache  
+com.kirtesh.downloadmanager.cache:  
  All JVM level Cache would reside here. 
 
-com.kirtesh.downloadmanager.enums  
+com.kirtesh.downloadmanager.enums: 
  All Enums / Constants to be present here 
 
-com.kirtesh.downloadmanager.factory 
- Factory would return Implementing class, the source can just call factory for providing implementation class. By this, source has been abstracted from Creating objects and would directly get required implementation without having to specify the exact class of the object that will be created by Factory. 
+com.kirtesh.downloadmanager.factory:
+Factory would return Implementing class, the source can just call factory for providing implementation class. By this, source has been abstracted from Creating objects and would directly get required implementation without having to specify the exact class of the object that will be created by Factory. 
 
-com.kirtesh.downloadmanager.metadata 
+com.kirtesh.downloadmanager.metadata:
  Would contains Pojo's of all metadata required during call's / task scheduling across project.
 
-com.kirtesh.downloadmanager.service 
- Package would keep abstraction of all Business logic required. 
+com.kirtesh.downloadmanager.service:
+ Package would keep abstraction of all Business logic required.
  Note : For ease of development and readability we have separated Start-Up Logic / implementation along with Validation Service and its  implementation from all other Business logic.
 
-com.kirtesh.downloadmanager.service.impl 
+com.kirtesh.downloadmanager.service.impl:
  Implements all Business Logic's as specified in com.agoda.downloadmanager.service package.
 
-com.kirtesh.downloadmanager.service.startup 
+com.kirtesh.downloadmanager.service.startup:
  Package would keep abstraction of all Start-up logics required. 
 
-com.kirtesh.downloadmanager.service.startup.impl 
+com.kirtesh.downloadmanager.service.startup.impl:
  Implements all Start-Up Logic's as specified in com.agoda.downloadmanager.service.startup package. Eg. Initializing All properties to JVM Cache at Startup
 
-com.kirtesh.downloadmanager.service.validation 
+com.kirtesh.downloadmanager.service.validation:
  Package would keep abstraction of all Validation logics required. 
 
-com.kirtesh.downloadmanager.service.validation.impl 
+com.kirtesh.downloadmanager.service.validation.impl:
  Implements all Validation Logic's as specified in com.agoda.downloadmanager.service.validation package. Eg. Validating if a location exist on local disk, before actually starting the download.
 
-com.kirtesh.downloadmanager.utils 
+com.kirtesh.downloadmanager.utils:
  Would contain all Utility methods that would be used across multiple services. Eg. Checking if String object is empty or not.
 
 Dependencies in project (Defined in POM):
