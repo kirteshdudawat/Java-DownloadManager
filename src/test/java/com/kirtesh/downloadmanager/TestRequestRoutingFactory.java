@@ -13,8 +13,7 @@ import com.kirtesh.downloadmanager.service.impl.SFTPDownloader;
  * 
  * @author kirteshdudawat
  *
- *
- *	This class tests com.agoda.downloadmanager.factory.RequestRoutingFactory.
+ *	This class tests com.kirtesh.downloadmanager.factory.RequestRoutingFactory.
  */
 public class TestRequestRoutingFactory {
 	

@@ -19,7 +19,8 @@ import com.kirtesh.downloadmanager.utils.DownloadUtils;
  * 
  * @author kirteshdudawat
  *
- * This class tests com.agoda.downloadmanager.utils.DownloadUtils
+ * This class tests com.kirtesh.downloadmanager.utils.DownloadUtils
+ * 
  */
 public class TestDownloadUtils {
 

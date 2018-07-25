@@ -55,19 +55,19 @@ import com.kirtesh.downloadmanager.utils.DownloadUtils;
  * Note : For ease of development and readability we have separated Start-Up Logic / implementation along with Validation Service and its  implementation from all other Business logic.
  * 
  * com.kirtesh.downloadmanager.service.impl 
- * Implements all Business Logic's as specified in com.agoda.downloadmanager.service package.
+ * Implements all Business Logic's as specified in com.kirtesh.downloadmanager.service package.
  * 
  * com.kirtesh.downloadmanager.service.startup 
  * Package would keep abstraction of all Start-up logics required. 
  * 
  * com.kirtesh.downloadmanager.service.startup.impl 
- * Implements all Start-Up Logic's as specified in com.agoda.downloadmanager.service.startup package. Eg. Initializing All properties to JVM Cache at Startup
+ * Implements all Start-Up Logic's as specified in com.kirtesh.downloadmanager.service.startup package. Eg. Initializing All properties to JVM Cache at Startup
  * 
  * com.kirtesh.downloadmanager.service.validation 
  * Package would keep abstraction of all Validation logics required. 
  * 
  * com.kirtesh.downloadmanager.service.validation.impl 
- * Implements all Validation Logic's as specified in com.agoda.downloadmanager.service.validation package. Eg. Validating if a location exist on local disk, before actually starting the download.
+ * Implements all Validation Logic's as specified in com.kirtesh.downloadmanager.service.validation package. Eg. Validating if a location exist on local disk, before actually starting the download.
  * 
  * com.kirtesh.downloadmanager.utils 
  * Would contain all Utility methods that would be used across multiple services. Eg. Checking if String object is empty or not.
@@ -79,6 +79,7 @@ import com.kirtesh.downloadmanager.utils.DownloadUtils;
  * 2. nurkiewicz.asyncretry : For implementation of Retryable Executor for Downloading files.
  * 3. jcraft.jsch : For downloading SFTP protocol based file.
  * 4. JUnit4 : For testing purpose.
+ * 
  */
 public class DownloadManager {
 	/**
@@ -132,7 +133,7 @@ public class DownloadManager {
 		/**
 		 * It would set task to Retry Async Scheduler. Where actual download would take place. For better optimization you can specify properties scheduled.threadpool.core.size, retry.max.retries, retry.max.delay.millis, retry.exponential.backoff.multiplier, retry.exponential.backoff.millis & {protocol}.buffer.size.
 		 * 
-		 * Note: {protocol}.buffer.size * scheduled.threadpool.core.size should never be more than memory available. For eg. If memory buffer available to system is 70 MB, & threadpool size is set to 7, than max. buffer size to any protocol should never be <10 MB. As if 7 concurrent download takes place of same protocol, Total buffer used would be 10 (Buffer for one protocol download) * 7(total threads executing) = 70 MB which is equivalent to max available buffer.
+		 * Note: {protocol}.buffer.size * scheduled.threadpool.core.size should never be more than memory available. For eg. If memory buffer available to system is 70 MB, & threadpool size is set to 7, than max. buffer size to any protocol should never be >10 MB. As if 7 concurrent download takes place of same protocol, Total buffer used would be 10 (Buffer for one protocol download) * 7(total threads executing) = 70 MB which is equivalent to max available buffer.
 		 */
 		downloadExecutorService.downloadUrls(urlToMetadataMapping);
 	}

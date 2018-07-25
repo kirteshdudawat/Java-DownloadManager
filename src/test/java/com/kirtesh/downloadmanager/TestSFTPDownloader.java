@@ -14,7 +14,8 @@ import com.kirtesh.downloadmanager.service.validation.impl.ValidationServiceImpl
  *
  *
  * This class tests Downloader Implementation for SFTP.
- * Test cases for class com.agoda.downloadmanager.service.imple.SFTPDownloader
+ * Test cases for class com.kirtesh.downloadmanager.service.imple.SFTPDownloader
+ * 
  */
 public class TestSFTPDownloader {
 

@@ -10,7 +10,8 @@ import com.kirtesh.downloadmanager.service.startup.impl.StartUpServiceImpl;
  * 
  * @author kirteshdudawat
  * 
- * This class tests com.agoda.downloadmanager.service.startup.StartupServiceImpl
+ * This class tests com.kirtesh.downloadmanager.service.startup.StartupServiceImpl
+ * 
  */
 public class TestStartUpServiceImpl {
 

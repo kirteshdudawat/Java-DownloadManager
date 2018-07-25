@@ -15,7 +15,8 @@ import com.kirtesh.downloadmanager.service.validation.impl.ValidationServiceImpl
  *
  * This class tests Downloader Implementation for HTTPS, FTP, HTTP and SFTP.
  * 
- * Test cases for class com.agoda.downloadmanager.service.impl.CommonDownloader. 
+ * Test cases for class com.kirtesh.downloadmanager.service.impl.CommonDownloader. 
+ * 
  * 
  * Its expected that TEST_SAVE_PATH exists on Disk.
  * 
