@@ -1,7 +1,8 @@
 # Download-Manager
 
 @author kirteshdudawat
-Download Manager to download multiple files based any underlying protocol SFTP, HTTP, HTTPS, FTP
+
+Download Manager to download multiple files based any underlying protocol SFTP, HTTP, HTTPS, FTP.
 
 Prerequesties: 
 1. Define all properties mentioned in src/main/resources/application.properties
@@ -57,10 +58,10 @@ com.kirtesh.downloadmanager.service.validation.impl:
 com.kirtesh.downloadmanager.utils:
  Would contain all Utility methods that would be used across multiple services. Eg. Checking if String object is empty or not.
 
-Dependencies in project (Defined in POM):
+Dependencies in project (Defined in POM.xml):
  1. log4j : For Logging purpose
  2. nurkiewicz.asyncretry : For implementation of Retryable Executor for Downloading files.
  3. jcraft.jsch : For downloading SFTP protocol based file.
  4. JUnit4 : For testing purpose.
 
-The Project has proper documentation and and taking a Java Doc would provide proper insights of project.
+The Project has proper documentation and and taking a Java Doc would provide proper insights of project. 
